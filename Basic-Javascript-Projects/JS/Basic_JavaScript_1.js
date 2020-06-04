@@ -22,3 +22,11 @@ function buttonFunction() {
     }
     document.getElementById("buttonResponse").innerHTML = txt;
 }
+
+function changeBackground () {
+    var text = document.getElementById("box1").style.backgroundColor = "red";
+}
+
+function backToNormal () {
+    var text = document.getElementById("box1").style.backgroundColor = "";
+}
