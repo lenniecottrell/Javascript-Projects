@@ -7,6 +7,7 @@ function addGlobalAndLocal() {
 }
 console.log(addGlobalAndLocal());
 
+//intentional error 
 function errorCheck() {
     var numDogs = 2;
     return (x + numdogs); //capitalization error
@@ -28,7 +29,7 @@ function dateCheck() {
     }
 }
 
-//the below code was for p. 136, but also applies to 137 and 
+//the below code was for p. 136 and 137
 function finalResult() {
     function bmiCalculator() {
         var heightInput, weightInput;
@@ -49,6 +50,19 @@ function finalResult() {
         else {
         document.getElementById("BMI_info").innerHTML = "You are overweight";
     };
-    }
+}
 
+// Time_function()
+function Time_function() {
+    var Time = new Date().getHours();
+    var Reply;
+    if (Time < 12 == Time > 0) {
+        Reply = "It is morning time!";
+    } else if (Time > 12 == Time < 18) {
+        Reply = "It is the afternoon.";
+    } else {
+        Reply = "It is evening time.";
+    }
+    document.getElementById("Time_of_day").innerHTML = Reply;
+}
 
