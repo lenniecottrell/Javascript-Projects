@@ -53,7 +53,7 @@ function finalResult() {
 }
 
 // Time_function()
-function Time_function() {
+function Time_Function() {
     var Time = new Date().getHours();
     var Reply;
     if (Time < 12 == Time > 0) {
