@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New HTML 1</title>
+</head>
+<body>
+    <div>
+        <h1>Breakfast time!</h1>
+        <h3>Please select an item from the list</h3>
+            <ul>
+                <li>Eggs</li>
+                <li>Oatmeal</li>
+                <li>Cheerios</li>
+                <li>Quiche</li>
+                <li>Chilaquiles</li>
+            </ul>
+        <h3>Enter your choice below:</h3>
+        <input id="breakfastChoice" type="text">
+        <button onclick="whatsForBreakfast()">Confirm</button>
+        <p id="confirmSelection"></p>
+    </div>
+    <div>
+        <h1>Lunch Options</h1>
+        <h3>Please note that some items may be unavailable</h3>
+            <ul>
+                <li class = "lunch">Pizza</li>
+                <li class = "lunch">Pasta</li>
+                <li class = "lunch">Steak Hoagie</li>
+                <li class = "lunch">Chicken Caeser Salad</li>
+                <li class = "lunch">Falafel Pita</li>
+            </ul>
+        <button onclick="lunchFunction()">Click here for availablity</button>
+    </div>
+    <div><br>
+        <canvas id="foodCanvas" width="500" height="250" style="border:2px solid blue"></canvas>
+    </div>
+    <div><br>
+        <canvas id="canvas2" width="500" height="250" style="border:2px solid green"></canvas>
+    </div>
+    <script src="./JS/New_Javascript_1.js"></script>
+</body>
+</html>
