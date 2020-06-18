@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try out some jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1 class = "title">Title Here</h1>
+        <button id="btn" value="Click here">Click to hide something</button>
+        <p id="paragraph">Something</p>
+    </div>
+    <script>
+        $(document).ready(function() {
+
+            $('#btn').click(function() {
+                $('#paragraph').slideUp(500).delay(1000).fadeIn(200);
+            });
+        });
+    </script>
+</body>
+</html>
