@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/New_CSS_3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>New HTML 3</title>
 </head>
 <body>
@@ -17,12 +19,59 @@
             <li>Sisters Coffee</li>
                 <img src="images/sisters-logo.png" id="Sisters" alt="Sisters Coffee" data-special_coffee = "Sisters Blend"
                 style="max-width: 25em; border: 1px solid black"
-                onclick="showCoffee(this)"><br>
+                onclick="showCoffee(this)"><br><br>
             <li>Doma Coffee</li>
                 <img src="images/Doma-Coffee-Logo-1.logo.40.md.jpg" id="Doma" alt="Doma Coffee" data-special_coffee = "Super Dank"
                 style="max-width: fit-content; border: 1px solid black"
                 onclick="showCoffee(this)"><br>
         </ol>
+    <!-- AUTO SLIDESHOW -->
+    <div id="slideshow">
+        <div>
+            <img src="images/Caffe-vita-theo-blend.jpg">
+        </div>
+        <div>
+            <img src="images/doma-super_dank.jpg">
+        </div>
+        <div>
+            <img src="images/sisters-blend.jpeg">
+        </div>
+    </div>
+
+    <!--Sticky contact button-->
+    <button class="open-button" onclick="openForm()">Join our mailing list</button>
+    <div class="form-popup"id="myForm">
+        <form action="" class="form-container">
+            <h1>Coffee Snob mailing list</h1>
+
+            <label for="email">Email</label>
+            <input type="email" placeholder="Email" name="email" required>
+
+            <label for="fname">First Name</label>
+            <input type="text" placeholder="First Name" name="fname" required>
+
+            <label for="lname">Last Name</label>
+            <input type="text" placeholder="Last Name" name="lname" required>
+
+            <button type="submit" class="btn">Submit</button>
+            <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+
+    <!--jQUERY for the slideshow-->
+    <script>
+        $("#slideshow > div:gt(0)").hide();
+
+        setInterval(function() {
+            $('#slideshow > div:first')
+            .fadeOut(1000)
+            .next()
+            .fadeIn(1000)
+            .end()
+            .appendTo('#slideshow');
+        }, 3000);
+    </script>
     <script src="./JS/New_Javascript_3.js"></script>
 </body>
 </html>

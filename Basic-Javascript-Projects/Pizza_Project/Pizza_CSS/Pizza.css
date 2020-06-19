@@ -1,7 +1,14 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: goldenrod;
 }
 
+nav {
+    text-align: center;
+}
 h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: maroon;
@@ -106,10 +113,13 @@ div {
 #callback {
     display: block;
     margin-top: 100px;
+    text-align: center;
 }
 
 #callback input[type=tel] {
     margin-left: 5em;
+    display: block;
+    margin:auto;
 }
 
 /* Button used to open the popup form - fixed at the bottom of the page */
