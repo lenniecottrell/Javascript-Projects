@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Pizza Drill Demo</title>    
+    <title>P-I-Z-Z-A</title>
     <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="Pizza_CSS/Pizza.css"/>
 </head>
 <body>
     <div id="menuBG">
-        <h1 style="margin:0 0px 0 20px;">Pizza Drill Tutorial</h1>
-        <input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">
+        <h1 id="bigTitle">GIMME PIZZAAAAAAA</h1>
+        <input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order"><br>
         <form id="frmMenu">
+            <div class="flex-center">
                 <!--Size selection-->
-                <div class="menu left">
+                <div class="menu">
                     <h3>Size:</h3>
                     <input class="size" type="radio" name="Size"
                         value="Personal Pizza">Personal Pizza<br>
@@ -27,7 +28,7 @@
                 </div>
                 
                 <!--Veggie Toppings-->
-                <div class="menu center">
+                <div class="menu">
                     <h3>Vegetables:</h3>
                     <input class="toppings" type="checkbox" name="Topping"
                         value="Mushrooms">Mushrooms<br>
@@ -42,7 +43,7 @@
                 </div>
                 
                 <!--Meat Toppings-->
-                <div class="menu right">
+                <div class="menu">
                     <h3>Meats:</h3>
                     <input class="toppings" type="checkbox" name="Topping"
                         value="Pepperoni">Pepperoni<br>
@@ -58,12 +59,40 @@
                         value="Chicken">Chicken<br>
                     <input class="toppings" type="checkbox" name="Topping"
                         value="Prociutto">Prociutto<br>
-                </div>
+                </div><br>
+
                 <div id="cart">
                     <div id="showText"></div>
                     <div id="totalPrice"></div>
                 </div>
-        </form>
+            </div>
+        </form><br>
+        <div class='contact'>
+            <form id="callback" method="post" name="callbackNum">
+                <p>Please give us your phone number in case we need to contact you
+                about your order</p>
+                <input type="tel" name="phone">
+                <input type="submit" value="Submit" onclick="validatePhone()">
+            </form>
+        </div>
+        <button class="open-button" onclick="openForm()">Click here for pizza rewards</button>
+        <div class="form-popup" id="pizzaRewards">
+            <form action="" class="form-container">
+                <h1>Click here to join Pizza Rewards</h1>
+
+                <label for="email">Email</label>
+                <input type="email" placeholder="Enter Email" name="email" required>
+
+                <label for="psw">Password</label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="btn">Login</button>
+                <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+        <footer>
+        <!--    <img src="images/pepperoni.jpg" id="pepperoni"> -->
+        </footer>
     </div>
     <script src="Pizza_Javascript/Pizza.js"></script>
 </body>

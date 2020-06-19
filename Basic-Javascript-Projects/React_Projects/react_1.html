@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React 1</title>
+        <script src="react.js"></script>
+    <script src="react-dom.js"></script>
+</head>
+<body>
+    <div id="My_React_Code"></div>
+    <script>
+        var Counter = React.createClass({ //creates a component class
+            render: function() {
+                var time_Passed = Math.round(this.props.time_Passed / 100); 
+                //the above creates the object 'time_Passed' and sets it to whatever input goes in the object (see below), divided by 100
+                //in the parentheses below--> 
+                var seconds_Passed = time_Passed / 10 + (time_Passed % 10 ? '' : '.0' );
+                //the below creates the text we can see in the browser
+                var text = 'My React code started running ' + 
+                    seconds_Passed + ' seconds ago!'; 
+                return React.DOM.p(null, text); //what is the first parameter for here?
+            }
+        });
+
+        var counter_Factory = React.createFactory(Counter); //generates an object that creates other objects
+
+        var start_Counting = new Date().getTime(); //the creates a time object as soon as the page loads
+
+        setInterval(function() { //calls a function at 
+            ReactDOM.render( //renders a React component, in this case counter_Factory
+                counter_Factory({time_Passed: new Date().getTime() - start_Counting}),
+                //the above constantly makes a new time, and subtracts the starting time from it, creating a counter
+                document.getElementById('My_React_Code')
+            );
+        }, 50);
+    </script>
+
+</body>
+</html>

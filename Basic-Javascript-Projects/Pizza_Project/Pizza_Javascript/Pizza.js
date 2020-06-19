@@ -56,3 +56,19 @@ function getTopping (runningTotal, text1) {
     document.getElementById("showText").innerHTML = text1;
     document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$" + runningTotal + ".00" + "</strong> <h3>"
 };
+
+function validatePhone() {
+    var phoneNum = document.forms["callbackNum"]["phone"].value;
+    if (phoneNum == "") {
+        alert("Phone number must be filled out");
+        return false;
+    }
+}
+
+function openForm() {
+    document.getElementById("pizzaRewards").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("pizzaRewards").style.display = "none";
+}

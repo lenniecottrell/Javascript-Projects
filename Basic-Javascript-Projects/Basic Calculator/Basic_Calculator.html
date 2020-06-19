@@ -6,6 +6,7 @@
     <meta name="author" content="Lennie Cottrell">
     <script src="JS/Basic_Calculator.js" defer></script>
     <link rel="stylesheet" href="CSS/Basic_Calculator.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <title>Calculator</title>
 </head>
 <body>
@@ -37,5 +38,11 @@
             <button type="button" class="equal-sign operator" value="=">=</button>
         </div>
     </div>
+    <script>document.body.className += ' fade-out';</script>
+    <script>
+        $(function() {
+            $('body').removeClass('fade-out');
+        });
+    </script>
 </body>
 </html>
