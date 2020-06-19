@@ -13,7 +13,7 @@
         <form id="frmMenu">
             <div class="flex-center">
                 <!--Size selection-->
-                <div class="menu">
+                <div class="menu left">
                     <h3>Size:</h3>
                     <input class="size" type="radio" name="Size"
                         value="Personal Pizza">Personal Pizza<br>
@@ -28,7 +28,7 @@
                 </div>
                 
                 <!--Veggie Toppings-->
-                <div class="menu">
+                <div class="menu center">
                     <h3>Vegetables:</h3>
                     <input class="toppings" type="checkbox" name="Topping"
                         value="Mushrooms">Mushrooms<br>
@@ -43,7 +43,7 @@
                 </div>
                 
                 <!--Meat Toppings-->
-                <div class="menu">
+                <div class="menu right">
                     <h3>Meats:</h3>
                     <input class="toppings" type="checkbox" name="Topping"
                         value="Pepperoni">Pepperoni<br>
@@ -66,7 +66,10 @@
                     <div id="totalPrice"></div>
                 </div>
             </div>
-        </form><br>
+        </form>
+    </div><br>
+
+        <!--CONTACT SECTION-->
         <div class='contact'>
             <form id="callback" method="post" name="callbackNum">
                 <p>Please give us your phone number in case we need to contact you
@@ -75,6 +78,9 @@
                 <input type="submit" value="Submit" onclick="validatePhone()">
             </form>
         </div>
+        <!-- END CONTACT -->
+
+        <!-- POPUP FORM -->
         <button class="open-button" onclick="openForm()">Click here for pizza rewards</button>
         <div class="form-popup" id="pizzaRewards">
             <form action="" class="form-container">
@@ -90,10 +96,12 @@
                 <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
             </form>
         </div>
-        <footer>
-        <!--    <img src="images/pepperoni.jpg" id="pepperoni"> -->
+
+        <!-- END POPUP FORM-->
+        <footer class="pizza-pics">
+            <img src="images/pepperoni.jpg" id="pepperoni" alt="pepperoni">
+            <img src="images/yummy.jpg" id="freshZa" alt="slice">
         </footer>
-    </div>
     <script src="Pizza_Javascript/Pizza.js"></script>
 </body>
 </html>

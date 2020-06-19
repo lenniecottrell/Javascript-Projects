@@ -33,11 +33,12 @@ div {
 #frmMenu {
     width: 400px;
     height: 200px;
-    display: flex;
+/*    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
     align-items: stretch;
+*/
 }
 
 #btnOrder {
@@ -53,29 +54,31 @@ div {
     float:right;
 }
 
-/*
 .menu {
     flex: 1 150px;
     padding: 0 0 10px 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
 }
-*/
+
 
 .left {
     float: left;
-    width:200px;
+    width:100%;
     height: 200px;
 }
 
 .center {
     float: left;
-    width:200px;
+    width:100%;
     height: 200px;
 }
 
 .right {
     float: right;
-    width:200px;
-    height:200px;;
+    width:100%;
+    height:200px;
 }
 
 /*
@@ -93,14 +96,13 @@ div {
 }
 
 #cart {
-    top:0;
+    top:2em;
     margin:0px auto;
     width: 400px;
     height:200px;
 }
 
-
-
+/*Callback section */
 #callback {
     display: block;
     margin-top: 100px;
@@ -110,7 +112,7 @@ div {
     margin-left: 5em;
 }
 
-/* Button used to open the contact form - fixed at the bottom of the page */
+/* Button used to open the popup form - fixed at the bottom of the page */
 .open-button {
     background-color: cornflowerblue;
     color: white;
@@ -134,8 +136,6 @@ div {
     z-index: 9;
 }
 
-
-
 /* Add styles to the form container */
 .form-container {
     max-width: 300px;
@@ -143,7 +143,7 @@ div {
     background-color: white;
 }
 
-/* Full-width input fields */
+/* input fields */
 .form-container input[type=email], .form-container input[type=password] {
     max-width: 90%;
     padding: 15px;
@@ -158,7 +158,7 @@ div {
     outline: none;
 }
 
-/* Set a style for th esubmit/login button */
+/* Set a style for the submit/login button */
 .form-container .btn {
     background-color: #4CAF50;
     color: white;
@@ -180,8 +180,37 @@ div {
     opacity:1;
 }
 
+/* Footer images */
 #pepperoni {
+    border-radius: 50%;
+    max-width: 40%;
+    height: auto;
     display: block;
-    size: 50%
+    float:left;
+    margin-top: 2em;
+    animation: pizzafade 2s infinite;
+    z-index: -1;
 }
 
+@keyframes pizzafade {
+    0% {opacity: 0}
+    100% {opacity: 1}
+    0% {opacity: 0}
+}
+
+#freshZa {
+    border-radius: 8px;
+    max-width: 45%;
+    height: auto;
+    display: block;
+    float: right;
+    margin-top: 6em;
+    margin-right:2em;
+    animation: pizzaZoomInOut 5s infinite;
+}
+
+@keyframes pizzaZoomInOut {
+    0% {transform: scale(1,1);}
+    50% {transform: scale(1.2,1.2);}
+    100% {transform: scale(1,1);}
+}
