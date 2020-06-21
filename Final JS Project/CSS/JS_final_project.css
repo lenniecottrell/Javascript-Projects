@@ -1,0 +1,454 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    margin: 0%;
+    opacity: 1;
+    transition: 3s opacity;
+    letter-spacing: .2vw;
+    font-size: 1.5vw;
+}
+
+body.fade-out {
+    opacity: .1;
+    transition: none;
+}
+
+/* Navbar */
+.Navbar {
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+        position: fixed;
+    -webkit-animation: moveNav 1s;
+        animation: moveNav 1s;
+}
+
+/* Navbar text */
+.Navbar a {
+    float: left;
+    display: block;
+    color: white;
+    padding: .75vw 1vw;
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.5vw;
+    min-block-size: 20px;
+    text-align: center;
+    position: relative;
+    -webkit-animation: movenavText 1.75s;
+        animation: movenavText 1.75s;
+    letter-spacing: .2vw;
+}
+
+/* The animation effect for moving the nav bar in from above the top of the screen upon page load */
+@keyframes moveNav {
+    from {top: -50vw;}
+    to {top: 0vw;}
+}
+
+/* The animation effect for moving the nav bar in from above the top of the screen upon page load */
+@keyframes movenavText {
+    from {top: -50vw;}
+    to {top: 0vw;}
+}
+
+/* The animation effect for moving the nav bar in from above the top of the screen upon page load */
+@keyframes movevideoText {
+    from {top: -50vw;}
+    to {top: 0px;}
+}
+
+/* Navbar hover effect */
+.Navbar a:hover {
+    background-color: #f4f4f4;
+    color: black;
+    font-weight: bold;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+}
+
+/* Navbar home button */
+.Navbar a.active { /* The active selector styles a link */
+    background-color: darkgray;
+}
+
+/* Video */
+#Typing_Video {
+    position: fixed; /* video fixed to the page */
+    right: 0;
+    bottom: 0;
+    min-height: 100%;
+    top: 0;
+    z-index: -1;
+    animation: zoominoutsinglefeatured 5s;
+}
+
+/* This causes the video to zoom out from a zoomed in position upon page load */
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1.5,1.5);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+/* Text over the video */
+.Video_Text {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    width: 100%;
+    padding-top: .1vh; /* This adds padding to the text so that the background goes slightly beyond the text */
+    padding-bottom: 1vh;
+    margin-top: 2%;
+        position: relative;
+    -webkit-animation: moveNav 1s;
+        animation: movevideoText 1s;
+}
+
+
+/* Slideshow Styling */
+#Slideshow_Background {
+    background:rgba(255,255,255, 0.35); /* This creates a slightly transparent white background that's placed over the video */
+}
+
+
+.mySlides {
+    display: none;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* Slideshow section / container */
+#Slideshow_Container {
+    width: 39.5vw;
+    height: auto;
+    padding-top: 4%;
+    position: relative;
+    margin: auto;
+}
+
+/* Images contained within slideshow */
+.Slide_Show_Images {
+    vertical-align: middle;
+    height: auto;
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75);
+    width: auto;
+}
+
+
+/* Next and previous buttons */
+.Previous, .Next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 2vw;
+    margin-top: -0vw;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 3px 3px 3px 3px;
+    user-select: none;
+    transition: 0.6s ease;
+}
+
+/* Positioning the right-hand next button */
+.Next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Hover effect on slide show buttons */
+.Previous:hover, .Next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+
+/* Slideshow text */
+.text {
+    color: white;
+    padding: 1vw;
+    position: relative;
+    bottom: 0;
+    width: 39.5vw;
+    text-align: center;
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw; 
+    font-size: 1.5vw;
+    background-color: rgba(0,0,0,0.75);
+    font-weight: bold;
+    border-radius: 7px 7px 7px 7px;
+}
+
+/* Number text (1/6, 2/6, etc.) - we have set this display to none, which means these are hidden */
+.Slide_Number {
+    color: white;
+    position: absolute;
+    top: 0;
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw; 
+    font-size: 1.5vw;
+    font-weight: bold;
+    display: none;
+}
+
+/* The dots under the slideshow */
+.dot {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    margin: .25vw;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* Hover effect for slideshow dots */ 
+.active, .dot:hover {
+    background-color: black;
+}
+
+/* Fading animation for slideshow */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;  
+}
+
+/* Table - this section covers the styling of the columns and rows within the table */
+* { /* The asterisk is a universal selector that applies this effect to all elements on the page */
+    box-sizing: border-box;
+}
+
+.Column_1 {
+    float: left;
+    width: 50%; /*This ensures the column takes up hald the page width */
+    padding: 1.6%;
+    padding-top: 3%; /* This ensures there is a a space between the top of the column and our headings */
+    height: 400px;
+    background-color: #f2f2f2;
+}
+
+.Column_2 {
+    float: left;
+    width: 50%; 
+    padding: 1.6%;
+    padding-top: 1.9%;
+    height: 400px;
+    background-color: #4d4d4d;
+}
+
+.Row:after {
+    content: ""; /* This inserts something after the content of selected elements */
+    display: table; /*The display properrty specifies the type of display behavior; the table value tells the browser to treat the element as a table */
+    clear: both; /* This clears anay other elements from floating on the left or the right of an element */
+}
+
+/* Heaading 1 elements */
+
+h1 {
+    text-transform: uppercase;
+    font-family: 'Julius Sans One', sans-serif;
+    text-align: center;
+    margin-top: 3%; /* a small margin above all headings */
+    color: #1a1a1a;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    letter-spacing: .1vw; /* This expands the text slightly */
+    font-size: 1.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+/* center align elements - all centered text */
+center {
+    font-family: 'Overpass', sans-serif;
+    text-align: center;
+    letter-spacing: .1vw;
+    font-size: 1.5vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+/* Anchor elements */
+a {
+    color: blue; /* Just ensures all links are blue */
+}
+
+q {
+    font-style: italic;
+    font-weight: bold;
+}
+
+img {
+    border-radius: 8px;
+    max-width: 340px;
+    height: 340px;
+    margin: auto auto auto auto;
+    display: block;
+    transition: transform 1s;
+    transform: scale(1.01);
+    overflow: hidden;
+}
+
+/*What is this even doing? *
+center:hover {
+    transition: transform 2s;
+    transform: scale(1.01);
+}
+
+/* Contact Form */
+
+@keyframes movePopup {
+    from {right: -40vw;}
+    to {bottom: 1.75vw;}
+}
+
+.Pop_up_button {
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 25vw;
+    background-color: white;
+    color:black;
+    border: solid;
+    cursor: pointer;
+    position: fixed;
+    -webkit-animation: movePopup 2s;
+    animation: movePopup 2s;
+}
+
+/* Popup form hidden by default */
+.form-popup {
+    border: 3px solid black;
+    z-index: 8;
+    display: none;
+    position: fixed;
+    bottom: 6px;
+    right: 6px;
+}
+
+.form-container input[type=text], .form-container input[type=email] {
+    width: 50%;
+    padding: .93vw;
+    margin: .6vw 0 .6vw 0;
+    border: none;
+    background: gainsboro;
+    border-radius: 4px;
+    resize: vertical; /* This specifies how an element is resized; vertical allows the user to resize the height of the element */
+    font-family: 'Overpass', sans-serif;
+    font-size: 1vw;
+}
+
+.form-container .btn {
+    background-color: white;
+    color: black;
+    border-color: black;
+    margin-bottom: 1vh;
+    padding: 0.5vw 0;
+}
+
+/* Close button */
+.form-container .cancel {
+    background-color: black;
+    color: white;
+    border-color: gray;
+}
+
+/* Button styling */
+button  {
+    letter-spacing: .3vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 0.5vw 0.5vw;
+    border-style: solid;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+}
+
+/* Hover effect for buttons */
+button:hover, .form-container .btn:hover {
+    color: white;
+    background-color: black;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    border-style: solid;
+    border-color: silver;
+}
+
+.form-container .cancel:hover {
+    color:white;
+    background-color: darkred;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    border-style: solid;
+    border-color: black;
+}
+
+footer {
+    padding: 2%;
+    background-color: white;
+}
+
+/* Come back for this one */
+    /* Submit button */
+    input[type="submit"] {
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        transform: scale(1.0);
+        transition: transform .5s;
+    }
+
+/* Hover effect for submit button */
+input[type=submit]:hover {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    transform: scale(1.1);
+    transition: transform .5s;
+}
+
+/* Form element */
+form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+img:hover {
+    filter: grayscale(5%); /* Brings most of the image's color back when hovered over */
+    transition: transform 1s;
+    transform: scale(1.1);
+}
