@@ -25,75 +25,77 @@ div {
     color: darkblue;
 }
 
-
-#menuBG {
-    width: 400px;
-    height: 470px;
-    margin: 10px auto;
-}
-
 #bigTitle {
+    display: block;
     font-size: 7vw;
     text-align: center;
 }
 
-#frmMenu {
-    width: 400px;
-    height: 200px;
-/*    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: stretch;
-*/
-}
-
+/* Styles the order button*/
 #btnOrder {
-    margin: 10px 10px 10px 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width:100px;
     height:40px;
 }
 
-#totalPrice {
-    width: 200px;
-    height: 190px;
-    margin: 0 auto;
-    float:right;
+/* BEGIN menu styles */
+#menuBG {
+    width: 800px;
+    height: 470px;
+    margin: 10px auto;
+}
+
+
+#frmMenu {
+    column-count: 3;
+    column-rule-style: solid;
+    height: auto;
+    white-space: nowrap;
+    text-align: left;
+  /*  
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+  */
 }
 
 .menu {
-    flex: 1 150px;
     padding: 0 0 10px 0;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1em;
+    max-width: 100%;
 }
-
 
 .left {
     float: left;
     width:100%;
     height: 200px;
+    top: 0;
 }
-
 .center {
-    float: left;
+    float: right;
     width:100%;
     height: 200px;
 }
-
 .right {
     float: right;
     width:100%;
     height:200px;
 }
+/*END menu styles */
 
-/*
-.flex-center {
-    display: flex;
-    justify-content: center;
+/* Displays the order and price */
+#cart {
+    top:2em;
+    margin:0px auto;
+    width: 400px;
+    height:200px;
 }
-*/
 
 #showText {
     width:200px;
@@ -102,11 +104,11 @@ div {
     float:left;
 }
 
-#cart {
-    top:2em;
-    margin:0px auto;
-    width: 400px;
-    height:200px;
+#totalPrice {
+    width: 200px;
+    height: 190px;
+    margin: 0 auto;
+    float:right;
 }
 
 /*Callback section */
