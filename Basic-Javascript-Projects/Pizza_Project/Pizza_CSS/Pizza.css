@@ -37,10 +37,6 @@ div {
     height: auto;
 }
 
-#bigTitle {
-    font-size: 7vw;
-    text-align: center;
-}
 
 /* Hero Section */
 .hero-video {
@@ -88,18 +84,17 @@ div {
     height: auto;
     order: 1;
 }
-
 .center {
     width: auto;
     height: auto;
     order: 2;
 }
-
 .right {
     width: auto;
     height: auto;
     order: 3;
 }
+/*END menu styles */
 
 #btnOrder {
     margin: auto;
