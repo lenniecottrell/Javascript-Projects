@@ -12,22 +12,37 @@
     </nav>
 </head>
 <body>
+
+    <!--HERO-->
+    <div class="hero-banner">
+        <div class="hero-video">
+            <video loop muted autoplay>
+                <source src="images/pizza_vid.mp4">
+            </video>
+        </div>
+
+        <div class="hero-text">
+            <h1>Pizza. Is. Delicious.</h1>
+            <p>This is a fact.</p>
+        </div>
+    </div>
+
+    <!--MENU SECTION-->
     <div id="menuBG">
         <h1 id="bigTitle">GIMME PIZZAAAAAAA</h1>
-        <input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order"><br>
         <form id="frmMenu">
-            <div class="flex-center">
+            <div class="flex-container">
                 <!--Size selection-->
                 <div class="menu left">
                     <h3>Size:</h3>
                     <input class="size" type="radio" name="Size"
                         value="Personal Pizza">Personal Pizza<br>
                     <input class="size" type="radio" name="Size"
-                        calue="Small">Small Pizza<br>
+                        value="Small Pizza">Small Pizza<br>
                     <input class="size" type="radio" name="Size"
                         value="Medium Pizza">Medium Pizza<br>
                     <input class="size" type="radio" name="Size"
-                        value="Large Pizza" checked>Large Pizza<br>
+                        value="Large Pizza">Large Pizza<br>
                     <input class="size" type="radio" name="Size"
                         value="Extra Large Pizza">Extra Large Pizza<br>
                 </div>
@@ -64,49 +79,58 @@
                         value="Chicken">Chicken<br>
                     <input class="toppings" type="checkbox" name="Topping"
                         value="Prociutto">Prociutto<br>
-                </div><br>
-
-                <div id="cart">
-                    <div id="showText"></div>
-                    <div id="totalPrice"></div>
                 </div>
             </div>
+
+            <!--Submit Button-->
+            <input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">
+
+            <!-- Cart details-->
+            <div id="cart">
+                <div id="showText"></div>
+                <div id="totalPrice"></div>
+            </div>
+
         </form>
-    </div><br>
+    </div>
+    <!--END MENU SECTION-->
 
-        <!--CONTACT SECTION-->
-        <div class='contact'>
-            <form id="callback" method="post" name="callbackNum">
-                <p>Please give us your phone number in case we need to contact you
-                about your order</p>
-                <input type="tel" name="phone">
-                <input type="submit" value="Submit" onclick="validatePhone()">
-            </form>
-        </div>
-        <!-- END CONTACT -->
+    <!--CONTACT SECTION-->
+    <div class='contact'>
+        <form id="callback" method="post" name="callbackNum">
+            <p>Please give us your phone number in case we need to contact you
+            about your order</p>
+            <input type="tel" name="phone">
+            <input type="submit" value="Submit" onclick="validatePhone()">
+        </form>
+    </div>
+    <!-- END CONTACT -->
 
-        <!-- POPUP FORM -->
-        <button class="open-button" onclick="openForm()">Click here for pizza rewards</button>
-        <div class="form-popup" id="pizzaRewards">
-            <form action="" class="form-container">
-                <h1>Click here to join Pizza Rewards</h1>
+    <!-- POPUP FORM -->
+    <button class="open-button" onclick="openForm()">Click here for pizza rewards</button>
+    <div class="form-popup" id="pizzaRewards">
+        <form action="" class="form-container">
+            <h1>Click here to join Pizza Rewards</h1>
 
-                <label for="email">Email</label>
-                <input type="email" placeholder="Enter Email" name="email" required>
+            <label for="email">Email</label>
+            <input type="email" placeholder="Enter Email" name="email" required>
 
-                <label for="psw">Password</label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+            <label for="psw">Password</label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
 
-                <button type="submit" class="btn">Login</button>
-                <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
-            </form>
-        </div>
+            <button type="submit" class="btn">Login</button>
+            <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!-- END POPUP FORM-->
 
-        <!-- END POPUP FORM-->
-        <footer class="pizza-pics" id="pictures">
-            <img src="images/pepperoni.jpg" id="pepperoni" alt="pepperoni">
-            <img src="images/yummy.jpg" id="freshZa" alt="slice">
-        </footer>
+    <!--FOOTER-->
+    <footer class="pizza-pics" id="pictures">
+        <img src="images/pepperoni.jpg" id="pepperoni" alt="pepperoni">
+        <img src="images/yummy.jpg" id="freshZa" alt="slice">
+    </footer>
+    <!--END FOOTER-->
+
     <script src="Pizza_Javascript/Pizza.js"></script>
 </body>
 </html>
